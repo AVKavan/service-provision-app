@@ -891,6 +891,34 @@ app.get("/archives", async (req, res) => {
   }
 });
 
+app.get("/archives/:id", async (req, res) => {
+  try {
+    const { id } = req.params; // Extract the 'id' from the route parameters
+
+    // Find all archives where customer_id matches 'id' and include the service_name from Service model
+    const archives = await Archive.findAll({
+      where: { customer_id: id },  // Filter by customer_id
+      include: [
+        {
+          model: Service, // Assuming Archive has a service_id and Service is associated
+          attributes: ['service_name'], // Fetch service_name from Service model
+        },
+      ],
+    });
+
+
+   
+
+    console.log(archives);
+
+    res.json(archives); // Return the filtered archives
+  } catch (err) {
+    console.error("Error fetching archives:", err);
+    res.status(500).json({ error: "Failed to fetch archive data" });
+  }
+});
+
+
 app.listen(8081, () => {
   console.log("Running... at port 8081");
 

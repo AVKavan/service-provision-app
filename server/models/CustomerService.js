@@ -33,7 +33,7 @@ const CustomerService = sequelize.define('CustomerService', {
 });
 
 // Define the relationships
-User.hasMany(CustomerService, { foreignKey: 'customer_id' });   
+User.hasMany(CustomerService, { foreignKey: 'customer_id' });  
 CustomerService.belongsTo(User, { foreignKey: 'customer_id' });
 
 Service.hasMany(CustomerService, { foreignKey: 'service_id' });

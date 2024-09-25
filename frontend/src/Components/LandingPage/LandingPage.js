@@ -155,6 +155,8 @@ import "./LandingPage.css";
 import Sidebar from "./Sidebar";
 import Footer from "./Footer";
 import Configuresidebar from "./ConfigureSidebar";
+import CustomerArchiveTable from "./CustomerArchives";
+import banner2 from "../../Assets/banner2.jfif"
 
 const LandingPage = () => {
   const [auth, setAuth] = useState(false);
@@ -375,6 +377,10 @@ const LandingPage = () => {
     // navigate(`/terminate-service?customer_id=${customer_id}`);
   };
 
+  const handleHistory = () => {
+    navigate(`/customerarchives/${customer_id}`);
+  }
+
   // Fetch plans for the selected service
   const fetchPlans = (serviceId) => {
     axios
@@ -460,6 +466,8 @@ const LandingPage = () => {
             <Dropdown.Menu>
               <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>
               <Dropdown.Item onClick={handleConfigureService}>My Services</Dropdown.Item>
+              <Dropdown.Item onClick={handleHistory}>Service History</Dropdown.Item>
+
               <Dropdown.Item href="/contactus">Help</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
@@ -481,7 +489,7 @@ const LandingPage = () => {
             <img className="d-block w-100" src="https://www.myvi.in/content/dam/vodafoneideadigital/StaticPages/consumerimages/Enterprise/5G_Enterprise/5g_desktop_webherobanner.png" alt="Second slide" />
           </Carousel.Item>
           <Carousel.Item>
-            <img className="d-block w-100" src="https://www.myvi.in/content/dam/vodafoneideadigital/consumerblog/Giganet_Banner_Desktop_1024x336px.png" alt="Third slide" />
+            <img className="d-block w-100" src={banner2} alt="Third slide" />
           </Carousel.Item>
         </Carousel>
       </Container>

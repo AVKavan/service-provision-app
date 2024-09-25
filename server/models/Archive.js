@@ -1,5 +1,6 @@
 import { DataTypes } from 'sequelize';
 import sequelize from '../sequelize.js'; // Path to your sequelize instance
+import Service from './Service.js'; // Import the Service model
 
 const Archive = sequelize.define('Archive', {
     customer_id: {
@@ -12,6 +13,10 @@ const Archive = sequelize.define('Archive', {
     },
     service_id: {
         type: DataTypes.INTEGER,
+        references: {
+            model: Service, // Reference the Service model
+            key: 'id',
+        },
         allowNull: false
     },
     plan_name: {
@@ -29,5 +34,11 @@ const Archive = sequelize.define('Archive', {
 }, {
     timestamps: true // Enable createdAt and updatedAt
 });
+
+
+// Archive model
+Service.hasMany(Archive, { foreignKey: 'service_id' });   
+Archive.belongsTo(Service, { foreignKey: 'service_id' });
+
 
 export default Archive;

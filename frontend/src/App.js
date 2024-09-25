@@ -14,6 +14,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
 import AboutUs from "./Components/LandingPage/Aboutus";
 import ContactPage from "./Components/LandingPage/Contactus";
+import CustomerArchiveTable from "./Components/LandingPage/CustomerArchives";
 function App() {
   return (
     <BrowserRouter>
@@ -28,8 +29,9 @@ function App() {
         <Route path="/configure-service" element={<Configure />}></Route>
         <Route path="/archive" element={<ArchiveTable />}></Route>
         <Route path="/aboutus" element={<AboutUs />}></Route>
-        <Route path="/contactus" element={<ContactPage />}></Route>
 
+        <Route path="/contactus" element={<ContactPage />}></Route>
+        <Route path="/customerarchives/:customer_id" element={<CustomerArchiveTable />} />
 
         <Route path="/registeradmin" element={<RegisterAdmin />}></Route>
       </Routes>

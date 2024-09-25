@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1727156394984" clover="3.2.0">
-  <project timestamp="1727156394984" name="All files">
-    <metrics statements="376" coveredstatements="165" conditionals="102" coveredconditionals="28" methods="47" coveredmethods="24" elements="525" coveredelements="217" complexity="0" loc="376" ncloc="376" packages="2" files="11" classes="11"/>
+<coverage generated="1727243315076" clover="3.2.0">
+  <project timestamp="1727243315076" name="All files">
+    <metrics statements="384" coveredstatements="169" conditionals="102" coveredconditionals="28" methods="48" coveredmethods="26" elements="534" coveredelements="223" complexity="0" loc="384" ncloc="384" packages="2" files="11" classes="11"/>
     <package name="server">
-      <metrics statements="358" coveredstatements="147" conditionals="102" coveredconditionals="28" methods="47" coveredmethods="24"/>
+      <metrics statements="366" coveredstatements="151" conditionals="102" coveredconditionals="28" methods="48" coveredmethods="26"/>
       <file name="config.js" path="C:\Users\e040150\Lumen_Programming\ReactDemo\new_service_provisioning_system\server\config.js">
         <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="1" methods="0" coveredmethods="0"/>
         <line num="2" count="1" type="stmt"/>
@@ -32,7 +32,7 @@
         <line num="5" count="1" type="stmt"/>
       </file>
       <file name="server.js" path="C:\Users\e040150\Lumen_Programming\ReactDemo\new_service_provisioning_system\server\server.js">
-        <metrics statements="340" coveredstatements="130" conditionals="96" coveredconditionals="24" methods="43" coveredmethods="20"/>
+        <metrics statements="348" coveredstatements="134" conditionals="96" coveredconditionals="24" methods="44" coveredmethods="22"/>
         <line num="18" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
         <line num="39" count="1" type="stmt"/>
@@ -117,8 +117,8 @@
         <line num="220" count="1" type="stmt"/>
         <line num="221" count="1" type="stmt"/>
         <line num="222" count="1" type="stmt"/>
-        <line num="230" count="8" type="stmt"/>
-        <line num="234" count="8" type="stmt"/>
+        <line num="230" count="27" type="stmt"/>
+        <line num="234" count="27" type="stmt"/>
         <line num="242" count="1" type="stmt"/>
         <line num="244" count="0" type="stmt"/>
         <line num="245" count="0" type="stmt"/>
@@ -370,9 +370,17 @@
         <line num="890" count="0" type="stmt"/>
         <line num="894" count="1" type="stmt"/>
         <line num="895" count="0" type="stmt"/>
-        <line num="898" count="0" type="stmt"/>
-        <line num="901" count="0" type="stmt"/>
-        <line num="903" count="0" type="stmt"/>
+        <line num="896" count="0" type="stmt"/>
+        <line num="899" count="0" type="stmt"/>
+        <line num="909" count="0" type="stmt"/>
+        <line num="911" count="0" type="stmt"/>
+        <line num="913" count="0" type="stmt"/>
+        <line num="914" count="0" type="stmt"/>
+        <line num="919" count="1" type="stmt"/>
+        <line num="920" count="1" type="stmt"/>
+        <line num="923" count="1" type="stmt"/>
+        <line num="926" count="1" type="stmt"/>
+        <line num="928" count="0" type="stmt"/>
       </file>
     </package>
     <package name="server.models">
